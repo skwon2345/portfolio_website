@@ -7,6 +7,7 @@ function App() {
   const [todos, setTodos] = useState([])
   const todoNameRef = useRef()
   const API = process.env.REACT_APP_API;
+  // const API = process.env.REACT_APP_API_TEST;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -39,8 +40,8 @@ function App() {
 
   function handelClearTodos() {
     
-    setName("sukkwon on");
-    setEmail("skwon2345@gmail.com");
+    setName("asukkwdson on");
+    setEmail("eskwon2feu3fes45@gmail.com");
     setPassword("0123jdlfei");
     const res = fetch(`${API}/users`, {
       method: "POST",
