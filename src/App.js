@@ -66,9 +66,7 @@ function App() {
     const data = await res.json();
     console.log(data)
   };
-
   
-
   return (
     <>
       <TodoList todos={todos} toggleTodo={toggleTodo} />
