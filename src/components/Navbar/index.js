@@ -6,7 +6,7 @@ const Navbar = () => {
         <>
             <Nav>
                 <NavLink to="/">
-                    <h1>Logo</h1>
+                    <h1>Sukkwon On</h1>
                 </NavLink>
                 <Bars />
                 <NavMenu>
