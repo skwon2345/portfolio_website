@@ -1,0 +1,12 @@
+.about{
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/images/dd.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 70px;
+}

@@ -1,15 +1,11 @@
 import React from 'react'
+import './styles/index.css'
 
 const Home = () => {
     return (
-        <div style={{
-            display:'flex',
-            justifyContent:'center', 
-            alignItems:'center', 
-            height:'90vh'}}
-        >
-            <h1>Home</h1>
-        </div>
+        <>
+            <h1 className="title">Sukkwon <span id='on'> On</span> <br/> Personal Page</h1>
+        </>
     )
 }
 
