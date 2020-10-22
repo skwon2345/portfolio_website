@@ -4,7 +4,7 @@ import './styles/about.css'
 const About = () => {
     return (
         <>
-            <h1 className="about">온석권의 꿈을 이루는 공간 <br/> updating</h1>
+            <h1 className="about">Introduction to projects</h1>
         </>
     )
 }
