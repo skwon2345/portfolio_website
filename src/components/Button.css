@@ -1,0 +1,23 @@
+:root {
+    --primary: #1888ff;
+}
+
+.btn {
+    padding: 8px 20px; /*padding for top,bottom and right left.*/
+    border-radius: 4px;
+    outline: none; /* when button clicked, outline color is set to black as default. so remove it by setting outline attribute as none.*/
+    border: none; /* before clicking button, black border appears as default. so set it as none.*/
+    font-size:18px;
+    color: #fff;
+    cursor: pointer; /* setting mouse shape on the button */
+    background-color: var(--primary);
+}
+
+.btn:hover { /* hover selector is triggered when the user mouse is moving on the selected class. In this case, btn class.*/
+    padding: 6px 18px;
+    transition: all 0.3s ease-out;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 4px;
+    border: 2px solid var(--primary);
+}
