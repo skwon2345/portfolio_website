@@ -11,7 +11,7 @@
     cursor: pointer;
     border: none;
     outline: none;
-    align-items:center;
+    justify-self: stretch;
 }
 
 .project:hover {
