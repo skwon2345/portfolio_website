@@ -19,7 +19,7 @@
     
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 414px) {
     .projects {
         grid-template-columns: repeat(autofill, minmax(250px, 1fr)); /* repeat 4 columns in a row with minimum size of 250px and maximum size of 1fr*/
 
