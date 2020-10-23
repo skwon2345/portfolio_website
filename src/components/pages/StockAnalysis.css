@@ -1,6 +1,6 @@
 .prj_title{
     display: flex;
-    height: 90vh;
+    height: 40rem;
     align-items: center;
     justify-content: center;
     background-image: url('/images/stock2.jpg');
@@ -13,7 +13,7 @@
 
 ._title {
     display:flex;
-    height:10vh;
+    height:4.3rem;
     align-itmes: left;
     justify-content: start;
     font-size: 3rem;
