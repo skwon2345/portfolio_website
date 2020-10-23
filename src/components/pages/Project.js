@@ -8,6 +8,7 @@ const Project = ({info}) => {
             <button className='project'>
                 <h2>{info.name}</h2>
                 <div className='description'>
+                    <br/>
                     <p>
                     {info.description}
                     <br/>
