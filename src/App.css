@@ -4,3 +4,11 @@
   padding: 0;
   font-family: 'PT Sans', sans-serif;
 }
+
+.home, .projects, .about, .contact, .documents {
+  display:flex;
+  height:90vh;
+  align-itmes: center;
+  justify-content: center;
+  font-size: 3rem;
+}

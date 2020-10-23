@@ -1,5 +1,5 @@
 .navbar {
-    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    background: linear-gradient(#546e7a, #526a6c);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -13,7 +13,7 @@
     margin-left: 20px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   
   .fa-firstdraft {
@@ -45,7 +45,8 @@
   }
   
   .nav-links:hover {
-    background-color: #1888ff;
+    color: #546e7a;
+    background-color: #fff;
     border-radius: 4px;
     transition: all 0.2s ease-out;
   }
@@ -62,7 +63,10 @@
     display: none;
   }
   
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 960px) { /* @media screen is used to develop a responsive web application. and using max-width attribute means that mobile environment settings will be coded inside the brackets. If you use min-width, then desktop environment inside the bracket.*/
+    .fa-caret-down {
+      display: none;
+    }
     .NavbarItems {
       position: relative;
     }
@@ -80,7 +84,7 @@
     }
   
     .nav-menu.active {
-      background: #242222;
+      background: #546e7a;
       left: 0;
       opacity: 1;
       transition: all 0.5s ease;
@@ -95,15 +99,16 @@
     }
   
     .nav-links:hover {
-      background-color: #1888ff;
-      border-radius: 0;
+        color: #546e7a;
+        background-color: #fff;
+        border-radius: 0;
     }
   
     .navbar-logo {
       position: absolute;
       top: 0;
       left: 0;
-      transform: translate(25%, 50%);
+      transform: translate(5%, 60%);
     }
   
     .menu-icon {
@@ -128,15 +133,15 @@
       margin: 2rem auto;
       border-radius: 4px;
       width: 80%;
-      background: #1888ff;
+      background: #fff;
       text-decoration: none;
-      color: #fff;
+      color: #546e7a;
       font-size: 1.5rem;
     }
   
     .nav-links-mobile:hover {
-      background: #fff;
-      color: #1888ff;
+      background: #546e7a;
+      color: #fff;
       transition: 250ms;
     }
   
