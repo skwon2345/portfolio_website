@@ -1,22 +1,22 @@
 export const MenuItems = [
     {
-        title: 'Marketing',
-        path: '/marketing',
+        title: 'Stock Analysis',
+        path: '/stock-analysis',
         cName: 'dropdown-link'
     },
     {
-        title: 'Consulting',
-        path: '/consulting',
+        title: 'Rental IOS App',
+        path: '/ios-app',
         cName: 'dropdown-link'
     },
     {
-        title: 'Design',
-        path: '/design',
+        title: 'C++ 2D Game',
+        path: '/',
         cName: 'dropdown-link'
     },
     {
-        title: 'Development',
-        path: '/development',
+        title: 'JAVA Game Dev',
+        path: '/java-game',
         cName: 'dropdown-link'
     },
 ]
