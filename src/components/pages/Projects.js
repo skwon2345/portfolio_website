@@ -1,9 +1,25 @@
 import React from 'react';
+import './Projects.css'
+import Project from './Project'
+import { ProjectItems } from './ProjectItems';
+
 
 export default function Projects() {
     return (
         <>
-            <h1 className='projects'>Projects</h1>
+            <div className='title'>
+                <h1>
+                    Projects
+                </h1>
+            </div>
+            
+            <div className='projects'>
+                {ProjectItems.map((item, index) => {
+                    return (
+                        <Project key={index} info={item} />
+                    )
+                })}
+            </div>
         </>
     );
 }

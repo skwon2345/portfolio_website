@@ -1,0 +1,40 @@
+.project {
+    width:100%;
+    height:13rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #546e7a;
+    color:#fff;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.project:hover {
+    transform: scale(1.1);
+    background: #4ac17a;
+
+    color:#fff;
+}
+
+.project > img {
+    width:33%;
+    height:auto;
+}
+
+.project > h2 {
+    font-size:1.8rem;
+    margin: 5px 0;
+    color: #4ac17a;
+}
+
+.description {
+    display:flex;
+    align-itmes: center;
+    justify-content: center;
+    font-size: 1rem;
+    width:95%;
+}

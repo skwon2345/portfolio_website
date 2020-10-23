@@ -11,7 +11,7 @@ export const MenuItems = [
     },
     {
         title: 'C++ 2D Game',
-        path: '/',
+        path: '/2d-game',
         cName: 'dropdown-link'
     },
     {
