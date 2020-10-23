@@ -1,10 +1,10 @@
 import React from 'react';
-import './Projects.css'
+import './ProjectList.css'
 import Project from './Project'
 import { ProjectItems } from './ProjectItems';
 
 
-export default function Projects() {
+export default function ProjectList() {
     return (
         <>
             <div className='title'>
