@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './StockAnalysis.css'
 import { FormControl, InputGroup, Button } from 'react-bootstrap'
 
@@ -7,6 +7,16 @@ export default function StockAnalysis() {
     const emailSend = () => {
         console.log(emailRef.current.value)
     }
+
+    const [event, setEvent] = useState("");
+
+    const handleChange = (e) => {
+        // setEvent(e.target.value)
+        console.log(event);
+        console.log(emailRef.current.value);
+    }
+
+
 
     return (
         <>
@@ -19,18 +29,15 @@ export default function StockAnalysis() {
             <div className='_title'>
                 Email Service
             </div>
-            <div className='d'>
-                <InputGroup className="mb-3">
-                    <FormControl ref={emailRef}
-                    placeholder="Recipient's username"
-                    aria-label="Recipient's username"
-                    aria-describedby="basic-addon2"
-                    type="email"
-                    />
-                    <InputGroup.Append>
-                    <Button onClick={emailSend} variant="outline-secondary">Button</Button>
-                    </InputGroup.Append>
-                </InputGroup>
+            <div className='wrapper'>
+                <div className='contact-form'>
+                    <div className='input-fields'>
+                        <input ref={emailRef} type="text" id="input" placeholder="Enter your Gmail" />               
+                    </div>
+                    <div classNAme="msg">
+                        <button className="btn" onClick={handleChange}>Send</button>
+                    </div>
+                </div>
             </div>
         </>
     );
