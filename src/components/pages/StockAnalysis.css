@@ -3,86 +3,38 @@
 .wrapper {
     margin-top:30px;
     margin-bottom:300px;
-}
-
-.contact-form{
-    width:80%;
     margin: 0 auto;
-    background:rgba(0,0,0,0.8);
-    padding:30px;
-    border-radius:5px;
-    display:flex;
-    box-shadow:0 0 10px;
-    align-items: center;
-    justify-content: center;
-}
-
-.input-fields{
     display:flex;
     flex-direction: column;
-    margin-right:2%;
+    align-items: center;
 }
 
-.input-fields, .msg {
-    width:100%;
+.report-form{
+    display:flex;
+    flex-direction: column;
+    width:80%;
+    background:rgba(0,0,0,0.8);
+    padding:3rem;
+    border-radius:1rem;
+    box-shadow:0 0 10px;
+    align-items:center;
 }
 
-#input {
-    width: 80%;
-    height:50px;
-    background:transparent;
-    outline:none;
-    border:none;
-    border-bottom: 2px solid #39b7dd;
-    font-size: 2rem;
-    color:#39b7dd;
-}
-
-#input:focus {
-    border-bottom: 4px solid #39b7dd;
-}
-
-#input:focus::placeholder {
-    color:transparent;
-}
-.btn {
-    width:9rem;
-    text-align: center;
-    background: #39b7dd;
-    border-radius:5px;
-    color:#fff;
-    cursor:pointer;
-}
-
-.btn:hover {
-    background:black;
-}
-
-::-webkit-input-placeholder {
-    color: #c5ecfd;
-}
-
-::-moz-input-placeholder {
-    color: #c5ecfd;
+/* for StockReport.js */
+.fileInfo {
+    font-size:2rem;
+    color: #4ac17a;
+    margin-top:200px;
 
 }
 
-::-ms-input-placeholder {
-    color: #c5ecfd;
-
+.fileInfo:hover {
+    background-color: #4ac17a;
+    color:rgba(0,0,0,0.8);
+    padding:0.5rem;
+    border-radius: 0.5rem;
 }
 
-
-@media screen and (max-width: 600px) {
-    .contact-form {
-        position:relative;
-        flex-direction: column;
-        height: 900px;
-    }
-    .input-fields, .msg {
-        width:100%;
-    }
-}
 .prj_title{
     display: flex;
     height: 40rem;
@@ -99,47 +51,34 @@
 ._title {
     display:flex;
     height:4.3rem;
-    align-itmes: left;
+    align-items: left;
     justify-content: start;
     font-size: 3rem;
     background-color: #607d8b;
     color:#fff;
-    margin-bottom: 20px
+    margin-bottom: 1.3rem;
+    padding-left:1.3rem;
 }
 
-.email {
+._body {
+    width:90%;
     display:flex;
-    height:10vh;
-    align-itmes: center;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    font-size: 2.3rem;
-    background-color: thistle;
+    font-size:2rem;
+    margin-bottom:2rem;
+    color: rgba(0,0,0,0.9);
 }
 
-.emailInput {
-    position: relative;
-    margin: 0;
-    padding: 12px;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid #fff;
-    font-size: 18px;
-    padding-top:15px;
-    padding-bottom:5px;
-    background: transparent;
+@media screen and (max-width: 600px) {
+    .contact-form {
+        position:relative;
+        flex-direction: column;
+    }
+    .input-fields, .msg {
+        width:100%;
+    }
 }
 
-.email_body #text {
-    padding-top:20px;
-    padding-left: 20%;
-
-    border:none;
-    outline:none;
-    border-bottom: 2px solid black;
-    width:80%;
-    height:2rem;
-}
-
-.email_body #text:focus {
-    border-bottom: 4px solid firebrick;
-}
