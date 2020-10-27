@@ -19,7 +19,7 @@ export default function StockAnalysis() {
         const headers = {
             'accept': 'application/json'
         }
-        axios.get('http://127.0.0.1:8088/storage')
+        axios.get('https://stocktrading-14119.df.r.appspot.com/storage')
         .then(res=>{
             setFileLinks(res.data)
         })
