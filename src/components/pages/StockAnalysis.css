@@ -18,7 +18,7 @@
     border-radius:1rem;
     box-shadow:0 0 10px;
     align-items:center;
-    margin-bottom: 3rem;
+    margin-bottom:3rem;
 }
 
 /* for StockReport.js */
@@ -52,7 +52,7 @@
 ._title {
     display:flex;
     height:4.3rem;
-    align-items: left;
+    align-items: center;
     justify-content: start;
     font-size: 3rem;
     background-color: #607d8b;
