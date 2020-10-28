@@ -23,7 +23,7 @@
 
 /* for StockReport.js */
 .fileInfo {
-    font-size:2.5vw;
+    font-size:2rem;
     color: #4ac17a;
     margin-top:200px;
 
@@ -51,10 +51,10 @@
 
 ._title {
     display:flex;
-    height:5.5vw;
+    height:4.3rem;
     align-items: center;
     justify-content: start;
-    font-size: 3vw;
+    font-size: 3rem;
     background-color: #607d8b;
     color:#fff;
     margin-bottom: 1.3rem;
@@ -68,7 +68,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size:2.5vw;
+    font-size:2rem;
     margin-bottom:2rem;
     color: rgba(0,0,0,0.9);
 }
