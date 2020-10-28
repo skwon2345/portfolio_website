@@ -9,7 +9,7 @@ export default function ProjectList() {
         <>
             <div className='title'>
                 <h1>
-                    Projects
+                    P R O J E C T S
                 </h1>
             </div>
             

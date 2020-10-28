@@ -1,12 +1,10 @@
 .title{
     display:flex;
     height:9.5rem;
-    align-itmes: center;
+    align-items: center;
     justify-content: center;
     font-size: 3rem;
-    background-color: #607d8b;
-    color:#fff;
-    margin-top:3px;
+    color: #607d8b;
     margin-bottom: 30px;
 }
 

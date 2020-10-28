@@ -5,7 +5,7 @@
   font-family: 'PT Sans', sans-serif;
 }
 
-.home, .about, .contact, .documents, .stock-analysis1 {
+.about, .contact, .documents, .stock-analysis1 {
   display:flex;
   height:20vh;
   align-items: center;
