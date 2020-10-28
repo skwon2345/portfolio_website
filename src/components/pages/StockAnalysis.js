@@ -40,7 +40,7 @@ export default function StockAnalysis() {
             <div className='wrapper'>
                 <div className="_body">
                     <p>Reports below are the latest 10 reports that are analyzied daily by my stock program, based on chart, daily volume, financial statements and recent news.
-                        <br/>The program analyze KOSPI, and KOSDAQ markets which are top 2 biggest stock markets in South Korea.
+                        <br/>The program analyze KOSPI, and KOSDAQ which are top 2 biggest stock markets in South Korea.
                     </p>
                 </div>
  
