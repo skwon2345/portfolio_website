@@ -1,25 +1,21 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './StockAnalysis.css'
-import { FormControl, InputGroup, Button, Alert } from 'react-bootstrap'
 import axios from 'axios';
 import StockReport from './StockReport'
 
-
 export default function StockAnalysis() {
+    //deploy: REACT_APP_API
+    //test: REACT_APP_API_TEST
+    const apiAddress = process.env.REACT_APP_API
     const emailRef = useRef()
-    const emailSend = () => {
-        console.log(emailRef.current.value)
-    }
 
-    const [send, setSend] = useState(false);
-    const [event, setEvent] = useState("");
     const [fileLinks, setFileLinks] = useState([]);
 
     useEffect(() => {
-        const headers = {
-            'accept': 'application/json'
-        }
-        axios.get('https://stocktrading-14119.df.r.appspot.com/storage')
+        // const headers = {
+        //     'accept': 'application/json'
+        // }
+        axios.get(apiAddress+'/storage')
         .then(res=>{
             setFileLinks(res.data)
         })
@@ -28,7 +24,6 @@ export default function StockAnalysis() {
 
     return (
         <>
-            {send && <Alert variant="info">An email has been successfully sent to '{emailRef.current.value}'. It will take at least 5 minutes to analyze the latest stock data.</Alert>}
             <div className='prj_title'>Stock Analysis using Python</div>
             
             <div className='_title'>Intro</div>
