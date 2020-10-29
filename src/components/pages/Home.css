@@ -15,9 +15,18 @@
 }
 
 .home-background{
-    height:50rem;
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
     background-image: url('/images/home.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    /* background-image: url('/images/home.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
 }
