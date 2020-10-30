@@ -5,10 +5,10 @@ export default function Contact() {
     const apiAddress = process.env.REACT_APP_API
 
     useEffect(() => {
-        // const headers = {
-        //     'accept': 'application/json'
-        // }
-        axios.get(apiAddress+'/api/data')
+        const headers = {
+            'accept': 'application/json'
+        }
+        axios.get(apiAddress+'/api/data', headers)
         .then(res=>{
             console.log(res)
         })
