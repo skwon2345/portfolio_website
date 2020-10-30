@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import axios from 'axios';
 
 export default function Contact() {
-    const apiAddress = process.env.REACT_APP_API_TEST
+    const apiAddress = process.env.REACT_APP_API
 
     useEffect(() => {
         // const headers = {
