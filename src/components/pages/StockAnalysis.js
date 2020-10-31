@@ -54,6 +54,14 @@ export default function StockAnalysis() {
                     })}
                 </div>
             </div>
+            <div className='_title'>
+                Search
+            </div>
+            <div className='_body'>
+                <p>
+                    This program is implemented in Python, which is best-fit language for analyzing data. 
+                </p>
+            </div>
         </>
     );
 }
