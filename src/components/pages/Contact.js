@@ -16,18 +16,18 @@ export default function Contact() {
     //     .catch(err=>console.log(err))
     // },[]);
 
-    const nameRef = useRef('')
-    const emailRef = useRef('')
-    const textRef = useRef('')
+    const formRef = useRef(null)
 
     const emailSent = () => {
         const headers = {
             'accept': 'application/json'
         }
         const postData = {
-            name:'e'
+            _name: formRef.current['name'].value,
+            email: formRef.current['email'].value,
+            message: formRef.current['message'].value
         }
-        axios.post(apiAddress+'/users', postData, headers)
+        axios.post(apiAddress+'/contact', postData, headers)
         .then(res=>{
             console.log(res)
         })
@@ -37,19 +37,19 @@ export default function Contact() {
     return (
         <>
             <div className='wrapper_contact'>
-                <form className = "form" onSubmit={emailSent}>
+                <form className = "contact-form" ref={formRef}>
                     <h1>Contact form</h1>
 
                     <label>Name</label>
-                    <input placeholder='name' ref={nameRef}/>
+                    <input placeholder='Name' name='name'/>
 
                     <label>Email</label>
-                    <input placeholder='Email'/>
+                    <input placeholder='Email' name='email'/>
 
                     <label>Message</label>
-                    <textarea placeholder='name'></textarea>
+                    <textarea placeholder='Message' name='message'></textarea>
 
-                    <button type='sumbit'>Submit</button>
+                    <button onClick={emailSent}>Submit</button>
                 </form>
             </div>
             
