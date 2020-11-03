@@ -29,11 +29,14 @@ export default function Contact() {
         }
         axios.post(apiAddress+'/contact', postData, headers)
         .then(res=>{
-            console.log(res)
+            // console.log(res)
             alert("Message Sent!")
         })
-        .catch(err=>console.log(err))
-        alert("An error occured. Please try again.")
+        .catch(err=>{
+            console.log(err)
+            alert("An error occured. Please try again.")
+        })
+        
     }
 
     return (
