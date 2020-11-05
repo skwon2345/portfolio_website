@@ -1,6 +1,31 @@
 .mt-3 {
     display: flex;
+    flex-direction: row;
     justify-content:center;
     margin-top:20px;
     margin-bottom:20px;
 }
+
+.mt-3 > button {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding: 20px;
+    border: none;
+    background-color: #4ac17a;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    margin-top: 10px;
+    margin: 0 auto;
+    width: 40%;
+    outline:none;
+
+}
+
+.mt-3 > button:hover {
+    background-color: #5dd68e;
+  }

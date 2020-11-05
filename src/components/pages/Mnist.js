@@ -13,18 +13,17 @@ const styles={
 }
 
 export default function Mnist() {
-    const apiAddress = process.env.REACT_APP_API
+    const apiAddress = process.env.REACT_APP_API_TEST
 
     const [send, setSend] = useState(false)
+    const [clicked, setClicked] = useState(false)
     const [error, setError] = useState(false)
     const [result, setResult] = useState()
     const sketch = useRef()
 
     const handleSubmit = () => {
         const canvas = sketch.current.toDataURL()
-        console.log('e')
-        console.log(sketch.current)
-        console.log('e')
+        setClicked(true)
         //saveAs(canvas, 'digit.jpg') // save canvas as digit.jpg to the local computer
         sendData(canvas)
     }
@@ -34,6 +33,7 @@ export default function Mnist() {
         sketch.current._backgroundColor('black')
         setSend(false)
         setError(false)
+        setClicked(false)
         setResult(null)
     }
 
@@ -50,6 +50,7 @@ export default function Mnist() {
         
         axios.post(apiAddress+'/api/mnist', fd, {headers:headers})
         .then(res=>{
+            setClicked(false)
             setSend(true)
             setResult(res.data['success'])
 
@@ -63,7 +64,8 @@ export default function Mnist() {
     return ( 
         <>
             {error && <Alert variant="danger">An Error Occured </Alert>}
-            {send ? <Alert variant="info">Successfully saved for classification </Alert> : <Spinner animation="border" />}
+            {!send && clicked &&  <h3>Loading...</h3>}
+            {send && <Alert variant="info">Successfully saved for classification </Alert>}
             {result && <h3>Result is {result}</h3>}
             <SketchField
                 ref={sketch}
@@ -77,9 +79,8 @@ export default function Mnist() {
                 lineWidth={60}
             />
             <div className="mt-3">
-                
-                <Button onClick={handleSubmit} variant='primary'>Send</Button>
-                <Button onClick={handleReset} variant='secondary'>Reset</Button>
+                <button onClick={handleSubmit}>Send</button>
+                <button onClick={handleReset}>Reset</button>
             </div>
         </>
     );
