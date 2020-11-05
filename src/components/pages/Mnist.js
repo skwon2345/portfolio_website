@@ -21,7 +21,9 @@ export default function Mnist() {
 
     const handleSubmit = () => {
         const canvas = sketch.current.toDataURL()
-        console.log(canvas)
+        console.log('e')
+        console.log(sketch.current)
+        console.log('e')
         //saveAs(canvas, 'digit.jpg') // save canvas as digit.jpg to the local computer
         sendData(canvas)
     }
@@ -36,7 +38,7 @@ export default function Mnist() {
         console.log(c) // c is base64 data of the image
 
         const headers = {
-            'accept': 'application/json'
+            'Content-Type': 'application/json'
         }
 
         const fd = {
@@ -45,7 +47,7 @@ export default function Mnist() {
         
         axios.post(apiAddress+'/api/mnist', fd, {headers:headers})
         .then(res=>{
-            console.log(res.data['success'])
+            console.log(res)
             setSend(true)
             setResult(res.data['success'])
 
