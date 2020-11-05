@@ -45,7 +45,7 @@ export default function Mnist() {
         
         axios.post(apiAddress+'/api/mnist', fd, {headers:headers})
         .then(res=>{
-            // console.log(res.data)
+            console.log(res.data['success'])
             setSend(true)
             setResult(res.data['success'])
 
