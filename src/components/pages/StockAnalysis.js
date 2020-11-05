@@ -6,7 +6,7 @@ import StockReport from './StockReport'
 export default function StockAnalysis() {
     //deploy: REACT_APP_API
     //test: REACT_APP_API_TEST
-    const apiAddress = process.env.REACT_APP_API_TEST
+    const apiAddress = process.env.REACT_APP_API
     const emailRef = useRef()
 
     const [fileLinks, setFileLinks] = useState([]);
