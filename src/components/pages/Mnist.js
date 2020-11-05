@@ -13,7 +13,7 @@ const styles={
 }
 
 export default function Mnist() {
-    const apiAddress = process.env.REACT_APP_API
+    const apiAddress = process.env.REACT_APP_API_TEST
 
     const [send, setSend] = useState(false)
     const [result, setResult] = useState()
@@ -45,7 +45,7 @@ export default function Mnist() {
         
         axios.post(apiAddress+'/api/mnist', fd, {headers:headers})
         .then(res=>{
-            console.log(res.data)
+            // console.log(res.data)
             setSend(true)
             setResult(res.data['success'])
 
@@ -60,8 +60,8 @@ export default function Mnist() {
             {result && <h3>Result is {result}</h3>}
             <SketchField
                 ref={sketch}
-                width='600px'
-                height='600px'
+                width='800px'
+                height='800px'
                 style={styles.draw}
                 tool={Tools.Pencil}
                 backgroundColor='black'
