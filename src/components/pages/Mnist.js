@@ -13,7 +13,7 @@ const styles={
 }
 
 export default function Mnist() {
-    const apiAddress = process.env.REACT_APP_API_TEST
+    const apiAddress = process.env.REACT_APP_API
 
     const [send, setSend] = useState(false)
     const [result, setResult] = useState()
