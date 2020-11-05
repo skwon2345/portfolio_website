@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react';
 import {SketchField, Tools} from 'react-sketch'
-import {Alert, Button} from 'react-bootstrap'
+import {Alert, Button, Spinner} from 'react-bootstrap'
 //import { saveAs } from 'file-saver'
 import axios from 'axios';
 import './Mnist.css'
@@ -16,6 +16,7 @@ export default function Mnist() {
     const apiAddress = process.env.REACT_APP_API
 
     const [send, setSend] = useState(false)
+    const [error, setError] = useState(false)
     const [result, setResult] = useState()
     const sketch = useRef()
 
@@ -32,6 +33,8 @@ export default function Mnist() {
         sketch.current.clear()
         sketch.current._backgroundColor('black')
         setSend(false)
+        setError(false)
+        setResult(null)
     }
 
     const sendData = (c) => {
@@ -51,17 +54,21 @@ export default function Mnist() {
             setResult(res.data['success'])
 
         })
-        .catch(err=>console.log(err))
+        .catch(err=>{
+            setError(true)
+            console.log(err)
+        })
     }
 
     return ( 
         <>
-            {send && <Alert variant="info">Successfully saved for classification </Alert>}
+            {error && <Alert variant="danger">An Error Occured </Alert>}
+            {send ? <Alert variant="info">Successfully saved for classification </Alert> : <Spinner animation="border" />}
             {result && <h3>Result is {result}</h3>}
             <SketchField
                 ref={sketch}
                 width= '80%'
-                height='80vh'
+                height='100vh'
                 style={styles.draw}
                 tool={Tools.Pencil}
                 backgroundColor='black'
@@ -70,6 +77,7 @@ export default function Mnist() {
                 lineWidth={60}
             />
             <div className="mt-3">
+                
                 <Button onClick={handleSubmit} variant='primary'>Send</Button>
                 <Button onClick={handleReset} variant='secondary'>Reset</Button>
             </div>
