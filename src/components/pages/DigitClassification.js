@@ -109,7 +109,7 @@ export default function DigitClassification() {
                 Facts
             </div>
             <div className='_body'>
-                <img src='/images/digit_classification_heatmap.png' width= '600px' height='400px' alt='heatmap'/>
+                <img src='/images/digit_classification_heatmap.png' width= '500px' height='350px' alt='heatmap'/>
                 <p>
                     The ratio between test data and train data is 2:8 and achieved 96% of predicting test data using this model. The heatmap above actually indicate how my model predict the test digits dataset.
                 </p>
