@@ -5,8 +5,8 @@ export const MenuItems = [
         cName: 'dropdown-link'
     },
     {
-        title: 'MNIST',
-        path: '/projects/mnist',
+        title: 'Digit Classification',
+        path: '/projects/digit-classification',
         cName: 'dropdown-link'
     },
     {

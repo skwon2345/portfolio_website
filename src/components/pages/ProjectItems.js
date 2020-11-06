@@ -7,8 +7,8 @@ export const ProjectItems = [
         description:'This project allow users to receive brief analysis with the latest market information updating daily. Also chart analysis and testing with a certain algorithm is available.'
     },
     {
-        name: 'MNIST',
-        path: '/projects/mnist',
+        name: 'Digit Classification',
+        path: '/projects/digit-classification',
         language: 'Python, sklearn',
         database: 'None',
         description:'Reading user written digits and predict what the digit is.'

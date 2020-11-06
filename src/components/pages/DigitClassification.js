@@ -3,7 +3,7 @@ import {SketchField, Tools} from 'react-sketch'
 import {Alert, Button, Spinner} from 'react-bootstrap'
 //import { saveAs } from 'file-saver'
 import axios from 'axios';
-import './Mnist.css'
+import './DigitClassification.css'
 
 const styles={
     draw: {
@@ -12,7 +12,7 @@ const styles={
     }
 }
 
-export default function Mnist() {
+export default function DigitClassification() {
     const apiAddress = process.env.REACT_APP_API
 
     const [send, setSend] = useState(false)
@@ -39,6 +39,9 @@ export default function Mnist() {
 
     const sendData = (c) => {
         console.log(c) // c is base64 data of the image
+        setSend(false)
+        setError(false)
+        setResult(null)
 
         const headers = {
             'Content-Type': 'application/json'
@@ -48,12 +51,11 @@ export default function Mnist() {
             image:c
         }
         
-        axios.post(apiAddress+'/api/mnist', fd, {headers:headers})
+        axios.post(apiAddress+'/api/digit-classification', fd, {headers:headers})
         .then(res=>{
             setClicked(false)
             setSend(true)
             setResult(res.data['success'])
-
         })
         .catch(err=>{
             setError(true)
@@ -63,6 +65,17 @@ export default function Mnist() {
 
     return ( 
         <>
+            <div className='prj_title'>Digit Classification using sklearn</div>
+            <div className='_title'>Intro</div>
+            <div className='_body'>
+                <p>
+                    There are many 
+                </p>
+            </div>
+            <div className='_title'>
+                Digit classification Model
+                {/* <a href={fileLink} download>fe</a> */}
+            </div>
             {error && <Alert variant="danger">An Error Occured </Alert>}
             {!send && clicked &&  <h3>Loading...</h3>}
             {send && <Alert variant="info">Successfully saved for classification </Alert>}
