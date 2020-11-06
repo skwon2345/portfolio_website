@@ -69,8 +69,8 @@ export default function Mnist() {
             {result && <h3>Result is {result}</h3>}
             <SketchField
                 ref={sketch}
-                width= '50vh'
-                height='50vh'
+                width= '35vh'
+                height='35vh'
                 style={styles.draw}
                 tool={Tools.Pencil}
                 backgroundColor='black'
