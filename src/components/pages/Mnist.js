@@ -70,13 +70,13 @@ export default function Mnist() {
             <SketchField
                 ref={sketch}
                 width= '50vw'
-                height='60vh'
+                height='50vw'
                 style={styles.draw}
                 tool={Tools.Pencil}
                 backgroundColor='black'
                 lineColor='white'
                 imageFormat='jpg'
-                lineWidth={50}
+                lineWidth={30}
             />
             <div className="mt-3">
                 <button onClick={handleSubmit}>Send</button>
