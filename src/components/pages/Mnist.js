@@ -13,7 +13,7 @@ const styles={
 }
 
 export default function Mnist() {
-    const apiAddress = process.env.REACT_APP_API_TEST
+    const apiAddress = process.env.REACT_APP_API
 
     const [send, setSend] = useState(false)
     const [clicked, setClicked] = useState(false)
@@ -69,14 +69,14 @@ export default function Mnist() {
             {result && <h3>Result is {result}</h3>}
             <SketchField
                 ref={sketch}
-                width= '80%'
-                height='100vh'
+                width= '50vw'
+                height='60vh'
                 style={styles.draw}
                 tool={Tools.Pencil}
                 backgroundColor='black'
                 lineColor='white'
                 imageFormat='jpg'
-                lineWidth={60}
+                lineWidth={50}
             />
             <div className="mt-3">
                 <button onClick={handleSubmit}>Send</button>
