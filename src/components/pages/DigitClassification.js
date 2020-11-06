@@ -99,7 +99,7 @@ export default function DigitClassification() {
                 backgroundColor='black'
                 lineColor='white'
                 imageFormat='jpg'
-                lineWidth={30}
+                lineWidth={20}
             />
             <div className="mt-3">
                 <button onClick={handleSubmit}>Send</button>
@@ -109,7 +109,7 @@ export default function DigitClassification() {
                 Facts
             </div>
             <div className='_body'>
-                <img src='/images/digit_classification_heatmap.png' alt='heatmap'/>
+                <img src='/images/digit_classification_heatmap.png' width= '600px' height='400px' alt='heatmap'/>
                 <p>
                     The ratio between test data and train data is 2:8 and achieved 96% of predicting test data using this model. The heatmap above actually indicate how my model predict the test digits dataset.
                 </p>
