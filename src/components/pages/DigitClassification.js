@@ -88,7 +88,7 @@ export default function DigitClassification() {
                     Sketch any digit on the canvas below.
                 </p>
             </div>
-            {error && <Alert variant="danger">An Error Occured </Alert>}
+            {error && <Alert variant="danger">An Error Occured. Please try again. </Alert>}
             {!send && clicked &&  <h3>Loading...</h3>}
             {send && <Alert variant="info">Successfully saved for classification </Alert>}
             {result && <h3>Result is {result}</h3>}
