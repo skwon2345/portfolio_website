@@ -1,7 +1,14 @@
-.sfco {
-    width: 100%;
-    padding-top:100%;
-    position: relative;
+.prj_title_mnist {
+    display: flex;
+    height: 40rem;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/images/mnist.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #000;
+    font-size: 7vw;
 }
 
 .mt-3 {

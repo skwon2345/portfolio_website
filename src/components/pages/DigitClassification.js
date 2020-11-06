@@ -12,8 +12,13 @@ const styles={
     }
 }
 
+const spanStyles={
+    backgroundColor:'white'
+}
+
+
 export default function DigitClassification() {
-    const apiAddress = process.env.REACT_APP_API
+    const apiAddress = process.env.REACT_APP_API_TEST
 
     const [send, setSend] = useState(false)
     const [clicked, setClicked] = useState(false)
@@ -38,7 +43,7 @@ export default function DigitClassification() {
     }
 
     const sendData = (c) => {
-        console.log(c) // c is base64 data of the image
+        // c is base64 data of the image
         setSend(false)
         setError(false)
         setResult(null)
@@ -65,11 +70,13 @@ export default function DigitClassification() {
 
     return ( 
         <>
-            <div className='prj_title'>Digit Classification using sklearn</div>
+            <div className='prj_title_mnist'><span style={spanStyles}>Digit Classification using sklearn</span></div>
             <div className='_title'>Intro</div>
             <div className='_body'>
                 <p>
-                    There are many 
+                    Based on sklearn.datasets, I trained my machine learning model by using logistic regression. Digits dataset given by sklearn is composed of 1797 hand-written digits, and they are all 8 by 8 pixels data.
+                    <br/>So I need to get input from an user, and convert base64 file from the sketch by user, flatten them to 8 by 8 pixels data to predict the digit with my model. 
+                    <br/>The ratio between test data and train data is 2:8 and achieved 96% of predicting test data using this model.
                 </p>
             </div>
             <div className='_title'>
