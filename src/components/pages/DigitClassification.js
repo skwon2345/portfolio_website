@@ -76,12 +76,10 @@ export default function DigitClassification() {
                 <p>
                     Based on sklearn.datasets, I trained my machine learning model by using logistic regression. Digits dataset given by sklearn is composed of 1797 hand-written digits, and they are all 8 by 8 pixels data.
                     <br/>So using 'Digit Classification Model' below, I need to get input from user, and convert base64 file from the sketch by user, flatten them to 8 by 8 pixels data to predict the digit with my model. 
-                    <br/>The ratio between test data and train data is 2:8 and achieved 96% of predicting test data using this model.
                 </p>
             </div>
             <div className='_title'>
                 Digit classification Model
-                {/* <a href={fileLink} download>fe</a> */}
             </div>
             <div className='_body'>
                 <p>
@@ -106,6 +104,15 @@ export default function DigitClassification() {
             <div className="mt-3">
                 <button onClick={handleSubmit}>Send</button>
                 <button onClick={handleReset}>Reset</button>
+            </div>
+            <div className='_title'>
+                Facts
+            </div>
+            <div className='_body'>
+                <img src='/images/digit_classification_heatmap.png' alt='heatmap'/>
+                <p>
+                    The ratio between test data and train data is 2:8 and achieved 96% of predicting test data using this model. The heatmap above actually indicate how my model predict the test digits dataset.
+                </p>
             </div>
         </>
     );
