@@ -70,7 +70,7 @@ export default function DigitClassification() {
 
     return ( 
         <>
-            <div className='prj_title_mnist'><span style={spanStyles}>Digit Classification using sklearn</span></div>
+            <div className='prj_title_mnist'><span style={spanStyles}>Digit Classification</span></div>
             <div className='_title'>Intro</div>
             <div className='_body'>
                 <p>
