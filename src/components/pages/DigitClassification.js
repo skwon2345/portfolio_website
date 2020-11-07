@@ -91,6 +91,7 @@ export default function DigitClassification() {
             {send && <Alert variant="info">Successfully saved for classification </Alert>}
             {result && <h3>Result is {result}</h3>}
             <SketchField
+                className='sf-00'
                 ref={sketch}
                 width= '35vh'
                 height='35vh'
@@ -109,7 +110,7 @@ export default function DigitClassification() {
                 Facts
             </div>
             <div className='_body'>
-                <img src='/images/digit_classification_heatmap.png' width= '400px' height='280px' alt='heatmap'/>
+                <img className='img-39' src='/images/digit_classification_heatmap.png' alt='heatmap'/>
                 <p>
                     The ratio between test data and train data is 2:8 and achieved 96% of predicting test data using this model. The heatmap above actually indicate how my model predict the test digits dataset.
                 </p>

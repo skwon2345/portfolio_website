@@ -42,3 +42,18 @@
 .mt-3 > button:hover {
     background-color: #5dd68e;
   }
+
+  .img-39 {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      height: 50%; 
+  }
+
+  @media screen and (max-width: 960px) {
+      .img-39{
+        width: 400px;
+        height: 280px; 
+      }
+  }
