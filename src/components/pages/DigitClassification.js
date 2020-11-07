@@ -18,7 +18,7 @@ const spanStyles={
 
 
 export default function DigitClassification() {
-    const apiAddress = process.env.REACT_APP_API
+    const apiAddress = process.env.REACT_APP_API_TEST
 
     const [send, setSend] = useState(false)
     const [clicked, setClicked] = useState(false)
@@ -91,16 +91,15 @@ export default function DigitClassification() {
             {send && <Alert variant="info">Successfully saved for classification </Alert>}
             {result && <h3>Result is {result}</h3>}
             <SketchField
-                className='sf-00'
                 ref={sketch}
-                width= '35vh'
-                height='35vh'
+                width= '20vh'
+                height='20vh'
                 style={styles.draw}
                 tool={Tools.Pencil}
                 backgroundColor='black'
                 lineColor='white'
                 imageFormat='jpg'
-                lineWidth={20}
+                lineWidth={5}
             />
             <div className="mt-3">
                 <button onClick={handleSubmit}>Send</button>
