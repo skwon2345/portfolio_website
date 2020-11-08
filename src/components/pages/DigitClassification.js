@@ -18,7 +18,7 @@ const spanStyles={
 
 
 export default function DigitClassification() {
-    const apiAddress = process.env.REACT_APP_API
+    const apiAddress = process.env.REACT_APP_API_TEST
 
     const [send, setSend] = useState(false)
     const [clicked, setClicked] = useState(false)
@@ -74,8 +74,12 @@ export default function DigitClassification() {
             <div className='_title'>Intro</div>
             <div className='_body'>
                 <p>
-                    Based on sklearn.datasets, I trained my machine learning model by using logistic regression. Digits dataset given by sklearn is composed of 1797 hand-written digits, and they are all 8 by 8 pixels data.
-                    <br/>So using 'Digit Classification Model' below, I need to get input from user, and convert base64 file from the sketch by user, flatten them to 8 by 8 pixels data to predict the digit with my model. 
+                    This digit classification model uses keras digit datasets, which is composed of 60,000 data for training, and 10,000 data for testing, that are all hand-written digits.
+                    <br/> In terms of the model algorithm, I compared several classification algorithm such as Logistic Regression, Decision Tree, Support Vector Machine(SVM), and Random Forest and chose SVM as my algorithm for this project.
+                    <br/>
+                    <br/> Comparison among these algorithms were executed by using K-Fold Cross Evaluation, and SVM got the highest accuracy score.
+                    <br/> Hand written digits given by keras digit datasets are all 28 by 28 pixels data, so I need to shrink the size of image from users to 28 by 28 to predict what the digits are.
+                    <br/> The data type of input from the sketch below is base64, so I need to resize the image to 28 by 28 2d image array then flatten them to 1d array, size of 784 (which is 28^2) for prediction.
                 </p>
             </div>
             <div className='_title'>
