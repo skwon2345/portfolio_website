@@ -77,13 +77,35 @@
     width:100%;
     border: 1px solid #444444;
     border-collapse: collapse;
+    outline: none;
 }
 
-.tbl_stck > th,td {
-    border: 1px solid #444444;
-    /* border-bottom: 1px solid #444444; */
+.tbl_stck > thead,td,th {
+    /* border: 1px solid #444444; */
+    border-bottom: 1px solid lightgray;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    padding: 30px;
 }
 
+.tbl_stck > thead {
+    background-color: #4ac17a;
+    color: #fff;
+    outline: none;
+}
+
+/* .tbl_stck tr:hover td {
+    background-color: #a9cfa9;
+    color: #fff;
+} */
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
 @media screen and (max-width: 600px) {
     .contact-form {
         position:relative;

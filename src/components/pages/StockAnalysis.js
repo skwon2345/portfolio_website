@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import './StockAnalysis.css'
 import axios from 'axios';
 import StockReport from './StockReport'
+import { ClipLoader } from 'react-spinners';
 
 const plus_styles={
     color:'#f00',
@@ -19,6 +20,8 @@ export default function StockAnalysis() {
 
     const [fileLinks, setFileLinks] = useState([]);
     const [data, setData] = useState([]);
+    const [reportLoading, setReportLoading] = useState(true);
+    const [tableLoading, setTableLoading] = useState(true);
 
     useEffect(() => {
         // const headers = {
@@ -27,13 +30,14 @@ export default function StockAnalysis() {
         axios.get(apiAddress+'/storage')
         .then(res=>{
             setFileLinks(res.data)
+            setReportLoading(false)
         })
         .catch(err=>console.log(err))
 
         axios.get(apiAddress+'/api/buySignal')
         .then(res=>{
             setData(res.data)
-            console.log(res.data)
+            setTableLoading(false)
         })
         .catch(err=>console.log(err))
     },[]);
@@ -53,14 +57,16 @@ export default function StockAnalysis() {
                 <p>
                     The chart below shows the buy signals from my program.
                 </p>
+                
                 <table className='tbl_stck'>
+                    
                     <thead>
                         <tr>
                             <th>Name</th>
                             <th>Code</th>
-                            <th>Price (<span>&#8361;</span>)</th>
+                            <th>Buy Price (<span>&#8361;</span>)</th>
                             <th>Date</th>
-                            <th>Current Price</th>
+                            <th>Current Price (<span>&#8361;</span>)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -77,6 +83,9 @@ export default function StockAnalysis() {
                         }
                     </tbody>
                 </table>
+                <div className='loading'>
+                    <ClipLoader size={42} color={'#4ac17a'} loading={tableLoading} />
+                </div>
             </div>
             <div className='_title'>
                 Reports
@@ -93,6 +102,9 @@ export default function StockAnalysis() {
                     {/* <div className='input-fields'>
                         <input ref={emailRef} type="text" id="input" placeholder="Enter your Gmail" />               
                     </div> */}
+                    <div className='loading'>
+                        <ClipLoader size={42} color={'#4ac17a'} loading={reportLoading} />
+                    </div>
                     {fileLinks.map((item, index) => {
                         return (
                             <StockReport className="fileInfo" key={index} info={item} />
