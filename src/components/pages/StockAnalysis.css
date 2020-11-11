@@ -73,6 +73,17 @@
     color: rgba(0,0,0,0.9);
 }
 
+.tbl_stck {
+    width:100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+}
+
+.tbl_stck > th,td {
+    border: 1px solid #444444;
+    /* border-bottom: 1px solid #444444; */
+}
+
 @media screen and (max-width: 600px) {
     .contact-form {
         position:relative;

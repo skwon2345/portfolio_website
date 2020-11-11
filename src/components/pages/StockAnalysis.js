@@ -3,13 +3,22 @@ import './StockAnalysis.css'
 import axios from 'axios';
 import StockReport from './StockReport'
 
+const plus_styles={
+    color:'#f00',
+}
+
+const minus_styles={
+    color:'#00f'
+}
+
 export default function StockAnalysis() {
     //deploy: REACT_APP_API
     //test: REACT_APP_API_TEST
-    const apiAddress = process.env.REACT_APP_API
+    const apiAddress = process.env.REACT_APP_API_TEST
     const emailRef = useRef()
 
     const [fileLinks, setFileLinks] = useState([]);
+    const [data, setData] = useState([]);
 
     useEffect(() => {
         // const headers = {
@@ -18,6 +27,12 @@ export default function StockAnalysis() {
         axios.get(apiAddress+'/storage')
         .then(res=>{
             setFileLinks(res.data)
+        })
+        .catch(err=>console.log(err))
+
+        axios.get(apiAddress+'/api/buySignal')
+        .then(res=>{
+            setData(res.data)
         })
         .catch(err=>console.log(err))
     },[]);
@@ -31,6 +46,36 @@ export default function StockAnalysis() {
                 <p>
                     This program is implemented in Python, which is best-fit language for analyzing data. 
                 </p>
+            </div>
+            <div className='_title'>Buy List</div>
+            <div className='_body'>
+                <p>
+                    The chart below shows the buy signals from my program.
+                </p>
+                <table className='tbl_stck'>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Code</th>
+                            <th>Price (<span>&#8361;</span>)</th>
+                            <th>Date</th>
+                            <th>Current Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            data.map((item) => (
+                                <tr key={item._id}>
+                                    <td>{item.name}</td>
+                                    <td>{item.code}</td>
+                                    <td>{Number(item.bPrice).toLocaleString()}</td>
+                                    <td>{item.date}</td>
+                                    <td>{(item.profit >= 0.0) ? <span style={plus_styles}>{Number(item.current_price).toLocaleString()} (+{item.profit} %)</span> : <span style={minus_styles}>{Number(item.current_price).toLocaleString()} ({item.profit} %)</span> }</td>
+                                </tr>
+                            ))
+                        }
+                    </tbody>
+                </table>
             </div>
             <div className='_title'>
                 Reports
