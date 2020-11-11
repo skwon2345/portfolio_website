@@ -34,7 +34,7 @@ export default function StockAnalysis() {
         })
         .catch(err=>console.log(err))
 
-        axios.get(apiAddress+'/api/buySignal')
+        axios.get(apiAddress+'/buySignal')
         .then(res=>{
             setData(res.data)
             setTableLoading(false)
