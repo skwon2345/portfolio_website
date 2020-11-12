@@ -15,7 +15,7 @@ const minus_styles={
 export default function StockAnalysis() {
     //deploy: REACT_APP_API
     //test: REACT_APP_API_TEST
-    const apiAddress = process.env.REACT_APP_API
+    const apiAddress = process.env.REACT_APP_API_TEST
     const emailRef = useRef()
 
     const [fileLinks, setFileLinks] = useState([]);
@@ -36,10 +36,11 @@ export default function StockAnalysis() {
 
         axios.get(apiAddress+'/buySignal')
         .then(res=>{
+            console.log('gege')
             setData(res.data)
             setTableLoading(false)
         })
-        .catch(err=>console.log(err))
+        .catch(err=>console.log("dd"+err))
     },[]);
 
     return (
@@ -59,7 +60,6 @@ export default function StockAnalysis() {
                 </p>
                 
                 <table className='tbl_stck'>
-                    
                     <thead>
                         <tr>
                             <th>Name</th>
