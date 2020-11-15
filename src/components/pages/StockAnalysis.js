@@ -31,16 +31,18 @@ export default function StockAnalysis() {
         .then(res=>{
             setFileLinks(res.data)
             setReportLoading(false)
+
         })
         .catch(err=>console.log(err))
 
         axios.get(apiAddress+'/buySignal')
         .then(res=>{
-            console.log('gege')
+
             setData(res.data)
             setTableLoading(false)
         })
-        .catch(err=>console.log("dd"+err))
+        .catch(err=>console.log(err))
+        
     },[]);
 
     return (
