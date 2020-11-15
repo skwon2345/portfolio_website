@@ -18,7 +18,7 @@ const spanStyles={
 
 
 export default function DigitClassification() {
-    const apiAddress = process.env.REACT_APP_API
+    const apiAddress = process.env.REACT_APP_API_TEST
 
     const [send, setSend] = useState(false)
     const [clicked, setClicked] = useState(false)
