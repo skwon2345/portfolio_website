@@ -15,7 +15,7 @@ const minus_styles={
 export default function StockAnalysis() {
     //deploy: REACT_APP_API
     //test: REACT_APP_API_TEST
-    const apiAddress = process.env.REACT_APP_API
+    const apiAddress = process.env.REACT_APP_API_TEST
     const emailRef = useRef()
 
     const [fileLinks, setFileLinks] = useState([]);
@@ -27,8 +27,17 @@ export default function StockAnalysis() {
         // const headers = {
         //     'accept': 'application/json'
         // }
+        // const headers = {
+        //     'Access-Control-Allow-Origin': '*',
+        // }
         const headers = {
-            'Access-Control-Allow-Origin': '*',
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+            },
+            proxy: {
+                host: '127.0.0.1',
+                port: 8088
+            }
         }
         axios.get(apiAddress+'/storage', headers)
         .then(res=>{
