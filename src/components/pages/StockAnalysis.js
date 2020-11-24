@@ -27,18 +27,10 @@ export default function StockAnalysis() {
         // const headers = {
         //     'accept': 'application/json'
         // }
-        // const headers = {
-        //     'Access-Control-Allow-Origin': '*',
-        // }
         const headers = {
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-            },
-            proxy: {
-                host: '127.0.0.1',
-                port: 8088
-            }
+            'Access-Control-Allow-Origin': '*',
         }
+
         axios.get(apiAddress+'/storage', headers)
         .then(res=>{
             setFileLinks(res.data)
