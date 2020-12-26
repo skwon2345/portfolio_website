@@ -59,6 +59,7 @@ export default function DigitClassification() {
         
         axios.post(apiAddress+'/api/digit-classification', fd, {headers:headers})
         .then(res=>{
+            res.set({'access-control-allow-origin':'*'});
             setClicked(false)
             setSend(true)
             setResult(res.data['success'])
