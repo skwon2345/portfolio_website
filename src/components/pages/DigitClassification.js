@@ -50,7 +50,6 @@ export default function DigitClassification() {
 
         const headers = {
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
         }
 
         const fd = {
