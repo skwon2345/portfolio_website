@@ -49,7 +49,9 @@ export default function DigitClassification() {
         setResult(null)
 
         const headers = {
-            'Content-Type': 'application/json',
+            "Access-Control-Allow-Headers": "*",
+            "Access-Control-Allow-Methods": 'OPTIONS,POST,GET',
+            "Content-Type": "application/json",
         }
 
         const fd = {
