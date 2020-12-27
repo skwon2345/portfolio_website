@@ -35,13 +35,11 @@ export default function StockAnalysis() {
         .then(res=>{
             setFileLinks(res.data)
             setReportLoading(false)
-
         })
         .catch(err=>console.log(err))
 
         axios.get(apiAddress+'/buySignal', headers)
         .then(res=>{
-
             setData(res.data)
             setTableLoading(false)
         })
