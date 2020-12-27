@@ -59,6 +59,7 @@ export default function DigitClassification() {
         
         axios.post(apiAddress+'/api/digit-classification', fd, {headers:headers})
         .then(res=>{
+            console.log("success")
             console.log(res)
             setClicked(false)
             setSend(true)
@@ -66,6 +67,7 @@ export default function DigitClassification() {
         })
         .catch(err=>{
             setError(true)
+            console.log("error")
             console.log(err)
         })
     }
