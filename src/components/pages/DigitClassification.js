@@ -52,9 +52,7 @@ export default function DigitClassification() {
             "Content-Type": "text/plain",
         }
 
-        const fd = {
-            image:c
-        }
+        const fd = c
         
         axios.post(apiAddress+'/api/digit-classification', fd, {headers:headers})
         .then(res=>{
