@@ -1,0 +1,19 @@
+.title{
+    display:flex;
+    height:9.5rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #607d8b;
+    margin-bottom: 15px;
+}
+
+.profile-img {
+    display:flex;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    height:14rem;
+    weight:14rem;
+    align-items: center;
+    justify-content: center;
+}
