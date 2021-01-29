@@ -61,7 +61,7 @@ export default function DigitClassification() {
             console.log(res)
             setClicked(false)
             setSend(true)
-            setResult(res.data['success'])
+            setResult(res.data)
         })
         .catch(err=>{
             setError(true)
