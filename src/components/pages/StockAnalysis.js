@@ -92,13 +92,14 @@ export default function StockAnalysis() {
                 </div>
             </div>
             <div className='_title'>
-                Reports
+                Automatic Reports
                 {/* <a href={fileLink} download>fe</a> */}
             </div>
             <div className='wrapper'>
                 <div className="_body">
-                    <p>Reports below are the latest 10 reports that are analyzied daily by my stock program, based on chart, daily volume, financial statements and recent news.
-                        <br/>The program analyze KOSPI, and KOSDAQ which are top 2 biggest stock markets in South Korea.
+                    <p>
+                    Reports below are the latest 10 reports that are automatically analyzed by my stock program, based on chart, daily volume, financial statements and recent news.
+                    <br/>The program analyze KOSPI, and KOSDAQ which are top 2 biggest stock markets in South Korea.
                     </p>
                 </div>
  

@@ -1,23 +1,35 @@
 import React from 'react';
 import './Project.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { Spring } from 'react-spring/renderprops';
 
 const Project = ({info}) => {
     return(
-        <Link to={info.path} style={{ textDecoration: 'none' }}>
-            <button className='project'>
-                <h2>{info.name}</h2>
-                <div className='description'>
-                    <br/>
-                    <p>
-                    {info.description}
-                    <br/>
-                    <br/>Language: {info.language}
-                    <br/>Database: {info.database}
-                    </p>
+        <Spring 
+            from={{ opacity: 0 }}
+            to= {{ opacity: 1}}
+        >
+            {props => (
+                <div style={props}>
+                    <Link to={info.path} style={{ textDecoration: 'none' }}>
+                        <button className='project'>
+                            <h2>{info.name}</h2>
+                            <div className='description'>
+                                <br/>
+                                <p>
+                                {info.description}
+                                <br/>
+                                <br/>Language: {info.language}
+                                <br/>Database: {info.database}
+                                </p>
+                            </div>
+                        </button>
+                    </Link>
                 </div>
-            </button>
-        </Link>
+                
+            )}
+        </Spring>
+        
     );
 }
 
