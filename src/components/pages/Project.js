@@ -8,6 +8,7 @@ const Project = ({info}) => {
         <Spring 
             from={{ opacity: 0, marginTop: -500 }}
             to= {{ opacity: 1, marginTop: 0 }}
+            config={{ delay: 300, duration: 300 }}
         >
             {props => (
                 <div style={props}>
