@@ -1,5 +1,7 @@
 import React from 'react';
 import './About.css'
+import { Spring } from 'react-spring/renderprops';
+
 
 export default function About() {
     return (
@@ -9,7 +11,17 @@ export default function About() {
                     A B O U T
                 </h1>
             </div>
-            <img className='profile-img' src="/images/profile.jpg" alt="profile" />
+            <Spring 
+            from={{ opacity: 0, marginTop: -500 }}
+            to= {{ opacity: 1, marginTop: 0 }}
+            >
+                {props => (
+                    <div style={props}>
+                        <img className='profile-img' src="/images/profile.jpg" alt="profile" />   
+                    </div>
+                )}
+            </Spring>
+            
             <div className='_title'>Biography</div>
             <div className='_body'>
                 <p>
