@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Spring } from 'react-spring/renderprops';
 
 const Project = ({info, index}) => {
-    let dur = 100*(index+1);
+    let dur = 300*(index+1);
     return(
         <Spring 
             from={{ opacity: 0, marginTop: -500 }}
