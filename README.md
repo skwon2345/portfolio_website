@@ -26,3 +26,5 @@ I started this project to extend my frontend programming skills that fully inter
 - Learned creating automatic documents, using scheduler to schedule what time to write report daily, api usage, some simple deep learning algorithm using python.
 - Learned creating api using Flask, and HTTP Server Requests (GET, POST).
 - Learned how to upload, update, delete data in document-oriented database using Firestore.
+- Learned how to commit code to github.
+- Learned how to crawl website that are loaded dynamically using Selenium, and BeautifulSoup.
