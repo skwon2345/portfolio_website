@@ -1,6 +1,6 @@
 # Website Development Using React and Flask
 
-- Website URL: <https://master.djdo0jrrbxwf7.amplifyapp.com/projects>
+- Website URL: <https://master.djdo0jrrbxwf7.amplifyapp.com>
 
 ## OverView
 This project is a simple web framework project that can introduce my on-going and finished projects to any possible employers.
