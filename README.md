@@ -1,5 +1,7 @@
 # Website Development Using React and Flask
 
+- Website URL: <https://master.djdo0jrrbxwf7.amplifyapp.com/projects>
+
 ## OverView
 This project is a simple web framework project that can introduce my on-going and finished projects to any possible employers.
 It also has some functionality that can interact with users, such as digit classification, recieve a drawn digit by any users and answer what was the digit that was drawns by the user, and downloadable reports that are created daily based on real chart data, financial statements, and latest related news. (Stock Markets that are analyzed by my program are KOSPI, and KOSDAQ which are two biggest markets in South Korea.)
