@@ -16,7 +16,7 @@ export default function ProjectList() {
             <div className='projects'>
                 {ProjectItems.map((item, index) => {
                     return (
-                        <Project key={index} info={item} />
+                        <Project key={index} info={item} index={index} />
                     )
                 })}
             </div>

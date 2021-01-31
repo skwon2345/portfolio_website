@@ -3,12 +3,13 @@ import './Project.css';
 import { Link } from 'react-router-dom';
 import { Spring } from 'react-spring/renderprops';
 
-const Project = ({info}) => {
+const Project = ({info, index}) => {
+    let dur = 100*(index+1);
     return(
         <Spring 
             from={{ opacity: 0, marginTop: -500 }}
             to= {{ opacity: 1, marginTop: 0 }}
-            config={{ delay: 500, duration: 500 }}
+            config={{ delay: dur, duration: dur }}
         >
             {props => (
                 <div style={props}>
