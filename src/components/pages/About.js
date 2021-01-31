@@ -14,7 +14,7 @@ export default function About() {
             <Spring 
             from={{ opacity: 0, marginTop: -500 }}
             to= {{ opacity: 1, marginTop: 0 }}
-            config={{ delay: 500, duration: 500 }}
+            config={{ delay: 700, duration: 700 }}
             >
                 {props => (
                     <div style={props}>
@@ -23,6 +23,7 @@ export default function About() {
                         <div className='_body'>
                             <p>
                                 I am a university student from South Korea, major in Computing Science in Simon Fraser University, located in Vancouver.
+                                <br/>
                                 <br/>This is my first website, developed by using Python as backend, and React as frontend. I am always enthusiastic in learning a new area of computer science and I enjoy discussing algorithm with my friends.
                                 <br/>Love to code as a group, do not know how to give up when facing a huge problem.
                                 <br/>
