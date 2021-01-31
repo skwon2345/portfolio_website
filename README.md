@@ -5,3 +5,9 @@
 2. Digit Classification (SVM Model)
 3. Contact Form (used Firestore to store message data)
 4. Documents Pagination (Not Done Yet)
+
+### Structure
+- Frontend: React
+- Backend: Python
+- Framework: Flask
+- Database: Firestore
