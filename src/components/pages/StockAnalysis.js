@@ -27,18 +27,15 @@ export default function StockAnalysis() {
         // const headers = {
         //     'accept': 'application/json'
         // }
-        const headers = {
-            'Access-Control-Allow-Origin': '*',
-        }
 
-        axios.get(apiAddress+'/storage', headers)
+        axios.get(apiAddress+'/storage')
         .then(res=>{
             setFileLinks(res.data)
             setReportLoading(false)
         })
         .catch(err=>console.log(err))
 
-        axios.get(apiAddress+'/buySignal', headers)
+        axios.get(apiAddress+'/buySignal')
         .then(res=>{
             setData(res.data)
             setTableLoading(false)

@@ -38,7 +38,7 @@
       "not dead",
       "not op_mini all"
     ],
-    "proxy": "https://stocktrading-14119.df.r.appspot.com",
+    //"proxy": "https://stocktrading-14119.df.r.appspot.com",
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
