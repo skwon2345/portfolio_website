@@ -54,8 +54,11 @@ export default function DigitClassification() {
 
         const fd = c
         
-        axios.post(apiAddress+'/api/digit-classification', fd, {headers:headers})
+        axios.options(apiAddress+'/api/digit-classification', fd, {headers:headers})
         .then(res=>{
+            res.header("Access-Control-Allow-Origin", "*");
+            res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
+            res.header("Access-Control-Allow-Headers","Content-Type, Authorization, Content-Length, X-Requested-With")
             console.log("success")
             console.log(res)
             setClicked(false)
