@@ -1,68 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Website Development Using React and Flask
 
-## Available Scripts
+- Website URL: <https://master.djdo0jrrbxwf7.amplifyapp.com>
 
-In the project directory, you can run:
+## OverView
+This project is a simple web framework project that can introduce my on-going and finished projects to any possible employers.
+It also has some functionalities that can interact with users, such as digit classification, recieve a drawn digit by any users and answer what was the digit that was drawns by the user, and downloadable reports that are created daily based on real chart data, financial statements, and latest related news. (Stock Markets that are analyzed by my program are KOSPI, and KOSDAQ which are two biggest markets in South Korea.)
 
-### `npm start`
+## Main Functions
+1. Daily Stock Analysis Reports (using 3rd party api)
+2. Digit Classification (SVM Model)
+3. Contact Form (used Firestore to store message data)
+4. Documents Pagination (Not Done Yet)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Structure
+- Frontend: React
+- Backend: Python
+- Framework: Flask
+- Database: Firestore
+- Frontend Server: AWS Amplify
+- Backedn Server: Google gcloud
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Goal
+I started this project to extend my frontend programming skills that fully interacts with backend without any network issues. Also, I collects daily stock reports written by my program, and save all reports data to cloud database in order to use them as fuel to my deep learning stock program that will be done later.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Achievenments
+- Learned structure of React, how to deploy the website, how data is passed by each class, and which default React functions are called when rendering a page.
+- Learned creating automatic documents, using scheduler to schedule what time to write report daily, api usage, some simple deep learning algorithm using python.
+- Learned creating api using Flask, and HTTP Server Requests (GET, POST).
+- Learned how to upload, update, delete data in document-oriented database using Firestore.
+- Learned how to commit code to github.
+- Learned how to crawl website that are loaded dynamically using Selenium, and BeautifulSoup.
