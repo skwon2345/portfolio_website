@@ -49,8 +49,7 @@ export default function DigitClassification() {
         setResult(null)
 
         const headers = {
-            "Content-Type": "text/plain",
-            "Access-Control-Allow-Origin": "*"
+            "Content-Type": "text/plain"
         }
 
         const fd = c
